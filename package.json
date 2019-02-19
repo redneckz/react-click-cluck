@@ -1,6 +1,6 @@
 {
   "name": "@redneckz/react-click-cluck",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Alexander Alexandrov",
   "description": "Postpones onClick event to prevent it in case of onDoubleClick event",
   "keywords": [
