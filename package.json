@@ -36,7 +36,7 @@
     "@redneckz/click-cluck": "~0.0.2"
   },
   "devDependencies": {
-    "@redneckz/react-lib-config": "0.0.2",
+    "@redneckz/react-lib-config": "0.0.3",
     "enzyme": "~3.8.0"
   },
   "scripts": {
