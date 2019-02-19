@@ -26,7 +26,7 @@ describe('clickCluck HOC', () => { // Integrational spec
       />,
     );
 
-    const btn = wrapper.find('button');
+    const btn = wrapper.dive();
     btn.simulate('click', { detail: 1 }); // First in sequence
     jest.advanceTimersByTime(300); // Not enough time for standalone click
     btn.simulate('click', { detail: 2 }); // Second in sequence
@@ -44,7 +44,8 @@ describe('clickCluck HOC', () => { // Integrational spec
       <Button onClick={onClick} />,
     );
 
-    wrapper.find('button').simulate('click', { detail: 1 });
+    const btn = wrapper.dive();
+    btn.simulate('click', { detail: 1 });
 
     jest.runAllTimers();
     expect(onClick).toBeCalledTimes(1);
@@ -57,7 +58,8 @@ describe('clickCluck HOC', () => { // Integrational spec
       <Button onDoubleClick={onDoubleClick} />,
     );
 
-    wrapper.find('button').simulate('doubleClick');
+    const btn = wrapper.dive();
+    btn.simulate('doubleClick');
 
     expect(onDoubleClick).toBeCalledTimes(1);
   });
@@ -71,7 +73,8 @@ describe('clickCluck HOC', () => { // Integrational spec
       <Button onClick={onClick} />,
     );
 
-    wrapper.find('button').simulate('click', { detail: 1 });
+    const btn = wrapper.dive();
+    btn.simulate('click', { detail: 1 });
 
     jest.advanceTimersByTime(99); // Not enough time for standalone click
     expect(onClick).not.toBeCalled();

@@ -22,10 +22,12 @@ export function clickCluck(timeout = 500) {
       }
 
       render() {
+        const { forwardedRef, ...props } = this.props;
         this.updateClickHandlers();
         return (
           <DOMComponent
-            {...this.props}
+            ref={forwardedRef}
+            {...props}
             {...this.getClickHandlers()}
           />
         );
@@ -34,6 +36,8 @@ export function clickCluck(timeout = 500) {
     ClickCluckedComponent.displayName = `clickCluck(${
       DOMComponent.displayName || DOMComponent.name || DOMComponent
     })`;
-    return ClickCluckedComponent;
+    return React.forwardRef(
+      (props, ref) => <ClickCluckedComponent {...props} forwardedRef={ref} />,
+    );
   };
 }
