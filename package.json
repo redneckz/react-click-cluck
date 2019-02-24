@@ -33,7 +33,7 @@
     "react": "^16.8.0-0"
   },
   "dependencies": {
-    "@redneckz/click-cluck": "~0.0.4"
+    "@redneckz/click-cluck": "~0.0.5"
   },
   "devDependencies": {
     "@redneckz/react-lib-config": "0.0.3",
