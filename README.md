@@ -8,6 +8,9 @@ Postpones "onClick" event to prevent it in case of "onDoubleClick" event.
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Bundle size][bundlephobia-image]][bundlephobia-url]
 
+> Generally it is a bad idea to have meaningful click and dblclick handlers on the same target.
+> But if your styleguide already includes such things, this utility will help.
+
 ## Installation
 
 ```shell
